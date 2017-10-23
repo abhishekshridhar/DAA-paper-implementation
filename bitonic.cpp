@@ -11,8 +11,7 @@ void compAndSwap(int a[], int i, int j, int dir)
 
 void bitonicMerge(int a[], int low, int cnt, int dir)
 {
-    if (cnt>1)
-    {
+    if (cnt>1){
         int k = cnt/2;
         for (int i=low; i<low+k; i++)
             compAndSwap(a, i, i+k, dir);
@@ -23,8 +22,7 @@ void bitonicMerge(int a[], int low, int cnt, int dir)
 
 void bitonicSort(int a[],int low, int cnt, int dir)
 {
-    if (cnt>1)
-    {
+    if (cnt>1){
         int k = cnt/2;
 
         #pragma omp parallel
@@ -53,8 +51,9 @@ int main()
     int up = 1;   
     sort(a, N, up);
 
-    printf("Sorted array: \n");
+    printf("Sorted array: \n\n");
     for (int i=0; i<N; i++)
-        printf("%d ", a[i]);
+        printf("%d  ", a[i]);
     return 0;
+    printf("\n");
 }
